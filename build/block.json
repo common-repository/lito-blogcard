@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lito/blogcard",
+  "version": "0.1.0",
+  "title": "ブログカード",
+  "description": "",
+  "category": "lito-blocks",
+  "icon": "admin-links",
+  "keywords": [
+    "リンク",
+    "埋め込み",
+    "カード型",
+    "カード",
+    "card",
+    "embed",
+    "link"
+  ],
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "lito-blogcard",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "default": "",
+      "source": "attribute",
+      "selector": ".litobc-item",
+      "attribute": "href"
+    },
+    "target": {
+      "type": "string",
+      "default": "_blank",
+      "source": "attribute",
+      "selector": ".litobc-item",
+      "attribute": "target"
+    },
+    "noopener": {
+      "type": "boolean",
+      "default": true
+    },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "noreferrer": {
+      "type": "boolean",
+      "default": false
+    },
+    "sponsored": {
+      "type": "boolean",
+      "default": false
+    },
+    "ugc": {
+      "type": "boolean",
+      "default": false
+    },
+    "showThumbnail": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "source": "text",
+      "selector": ".litobc-title"
+    },
+    "description": {
+      "type": "string",
+      "default": "",
+      "source": "text",
+      "selector": ".litobc-description"
+    },
+    "thumbnailUrl": {
+      "type": "string",
+      "default": "",
+      "selector": ".litobc-thumbnail",
+      "source": "attribute",
+      "attribute": "src"
+    },
+    "faviconUrl": {
+      "type": "string",
+      "default": "",
+      "selector": ".litobc-favicon",
+      "source": "attribute",
+      "attribute": "src"
+    }
+  }
+}

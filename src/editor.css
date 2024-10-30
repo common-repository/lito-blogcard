@@ -1,0 +1,123 @@
+/* For Editor */
+
+.wp-block-lito-blogcard {
+  position: relative;
+  &.is-selected {
+    z-index: 9999;
+  }
+}
+
+.is-selected .litobc-search {
+  display: block;
+}
+
+.litobc-has-cache-label {
+  font-size: 0.75rem;
+  color: var(--litobc-gray);
+  margin-left: 1.5rem;
+  margin-top: 6px;
+}
+
+.litobc-search {
+  display: none;
+
+  &:not(:has(+ .litobc)) {
+    display: block;
+  }
+}
+
+.litobc-search-results {
+  position: relative;
+  box-shadow: 0 4px 8px -4px rgb(0 0 0 /20%);
+  border-radius: 0.25rem;
+  background-color: white;
+  border: 1px solid var(--litobc-light-gray);
+  max-height: 70svh;
+  overflow: scroll;
+}
+
+.litobc-search-results-item {
+  & > p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    color: var(--litobc-gray);
+    font-size: 0.75rem;
+    border-bottom: 1px solid var(--litobc-light-gray);
+  }
+
+  & > ul {
+    margin: 0;
+    padding: 0 !important;
+    list-style: none;
+
+    & > li {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      display: grid;
+
+      &:hover {
+        background-color: var(--litobc-base-gray);
+      }
+    }
+  }
+
+  & + .litobc-search-results-item {
+    border-top: 1px solid var(--litobc-light-gray);
+  }
+}
+
+.litobc-search-results-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.litobc-search-results-url {
+  font-size: 0.625rem;
+  color: var(--litobc-gray);
+}
+
+.wp-block-lito-blogcard:not(.is-selected) .litobc-search-results {
+  display: none;
+}
+
+.litobc-input {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.litobc-link {
+  display: none;
+
+  .is-selected & {
+    display: block;
+  }
+
+  & a {
+    text-decoration: none !important;
+    color: var(--wp-components-color-accent, var(--wp-admin-theme-color)) !important;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.litobc-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+
+.litobc-item {
+  margin-top: 0.5rem;
+  text-decoration: none !important;
+  pointer-events: none;
+}
+
+.cached-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.625rem;
+}
